@@ -21,7 +21,8 @@ def main():
         elif line == ':':
             line_output = ''
         elif line == '\\page':
-            line_output = '<div style="page-break-after: always"></div>'
+            # line_output = '<div style="page-break-after: always" markdown="1"></div>'
+            line_output = ''
         else:
             line_output = line
         output += f'{line_output}\n'
