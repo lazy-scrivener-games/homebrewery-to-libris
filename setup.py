@@ -14,5 +14,6 @@ setup(
         'scripts/homebrewery-to-enki'
     ],
     install_requires=[
+        'markdown2 == 2.4.1'
     ]
 )

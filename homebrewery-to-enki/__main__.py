@@ -4,6 +4,7 @@ Converts a Homebrewery-formatted markdown input to an enki-compatible one
 usage: homebrewery-to-enki <input string>
 """
 import sys
+import markdown2
 
 def main():
     """
@@ -20,6 +21,8 @@ def main():
             line_output = '</div>'
         elif line == ':':
             line_output = ''
+        elif '::' in line:
+            line_output = parse_stats(line)
         elif line == '\\page':
             # line_output = '<div style="page-break-after: always" markdown="1"></div>'
             line_output = ''
@@ -31,6 +34,12 @@ def main():
 def parse_double_curly_brace_start(line: str) -> str:
     """
     Converts double curly brace Homebrewery format to a div tag.
+
+    Args:
+        line (str): Input line to be processed.
+
+    Returns:
+        str: Modified output with double curly brace correctly interpreted
     """
     line = line[2:]
     if line.endswith('}}'):
@@ -41,6 +50,23 @@ def parse_double_curly_brace_start(line: str) -> str:
     class_list.append('block')
     class_string = ' '.join(class_list)
     return f'<div class="{class_string}" markdown="1">'
+
+def parse_stats(line: str) -> str:
+    """
+    Converts double colon notation in Homebrewery to <dl> tag
+
+    Args:
+        line (str): Input line to be processed.
+
+    Returns:
+        str: Modified output with double colon correctly interpreted
+    """
+    line = markdown2.markdown(line, extras=['fenced-code-blocks', 'markdown-in-html', 'tables'])
+    line = line.replace('<p>', '')
+    line = line.replace('</p>', '')
+    line = f'<dl>\n<dt>\n{line}\n</dd>\n</dl>'
+    line = line.replace('::', '\n</dt>\n<dd>\n')
+    return line
 
 if __name__ == '__main__':
     main()
