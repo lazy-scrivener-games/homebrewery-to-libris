@@ -1,12 +1,24 @@
-# homebrewery-to-enki
+# homebrewery-to-libris
 
-Converts Homebrewery formatted markdown to an enki-compatible format.
+Converts Homebrewery formatted markdown to an libris-compatible format.
 
 ## Requirements
 
 * Generally assumes a Linux environment.
-* Go into the top-level project folder and install the module using pip3 install .
 
-## Usage
+## Setup
 
-* Run `homebrewery-to-enki < FILE_NAME.md`.
+* Install using `pip install homebrewery-to-libris`
+
+## Usage with Libris
+
+* In your libris configuration JSON, add the following property:
+```
+"markdownPipe": "homebrewery-to-libris"
+```
+
+That's it!
+
+## Independent usage
+
+* Run `homebrewery-to-libris < FILE_NAME.md`.
