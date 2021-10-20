@@ -10,9 +10,9 @@ Converts [Homebrewery](https://homebrewery.naturalcrit.com/) formatted markdown 
 ## Setup
 
 * Install using `pip install homebrewery-to-libris`
-* Make sure you use the CSS that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/blob/convert-for-enki/phb.standalone.css) in your libris configuration file.
+* Make sure you use the CSS that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/blob/convert-for-libris/phb.standalone.css) in your libris configuration file.
 * Make sure you use the setting 
-* Make sure you install the TTF fonts that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/tree/convert-for-enki/themes/fonts/5e).
+* Make sure you install the TTF fonts that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/tree/convert-for-libris/themes/fonts/5e).
 
 ## Usage with Libris
 
