@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env python
 
-python3 -m homebrewery-to-libris "$@"
+from homebrewery_to_libris.__main__ import main
+
+if __name__  == '__main__':
+    main()

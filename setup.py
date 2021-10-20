@@ -1,10 +1,10 @@
 from setuptools import setup
 setup(
     name='homebrewery-to-libris',
-    version='1.0.0',
+    version='1.1.0',
     description='Converter between homebrewery and libris markdown formats.',
     url='https://github.com/lazy-scrivener-games/homebrewery-to-libris',
-    download_url='https://github.com/lazy-scrivener-games/homebrewery-to-libris/archive/refs/tags/v1.0.tar.gz',
+    download_url='https://github.com/lazy-scrivener-games/homebrewery-to-libris/archive/refs/tags/v1.1.tar.gz',
     author='Chris Muller',
     author_email='chris@lazyscrivenergames.com',
     keywords=[
@@ -21,7 +21,7 @@ setup(
     ],
     license='MIT',
     packages=[
-        'homebrewery-to-libris'
+        'homebrewery_to_libris'
     ],
     scripts=[
         'scripts/homebrewery-to-libris'
