@@ -4,7 +4,7 @@ setup(
     version='1.0.0',
     description='Converter between homebrewery and libris markdown formats.',
     url='https://github.com/lazy-scrivener-games/homebrewery-to-libris',
-    download_url='FILL_THIS_OUT_______________________________________________',
+    download_url='https://github.com/lazy-scrivener-games/homebrewery-to-libris/archive/refs/tags/v1.0.tar.gz',
     author='Chris Muller',
     author_email='chris@lazyscrivenergames.com',
     keywords=[
