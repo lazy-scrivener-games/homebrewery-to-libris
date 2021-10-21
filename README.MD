@@ -1,20 +1,33 @@
-# homebrewery-to-enki
+# homebrewery-to-libris
 
-Converts [Homebrewery](https://homebrewery.naturalcrit.com/) formatted markdown to an enki-compatible format.
+Converts [Homebrewery](https://homebrewery.naturalcrit.com/) formatted markdown to a libris-compatible format.
 
 ## Requirements
 
-* Generally assumes a Linux environment, but may work with Windows. All of my Windows testing uses [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install).
+* Generally assumes a Linux environment, but may work with Windows. All of my Windows testing used [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install).
 * Python 3.x
 
 ## Setup
 
-* Go into the top-level project folder and install the module using pip3 install .
+* Install using `pip install homebrewery-to-libris`
+* Make sure you use the CSS that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/blob/convert-for-libris/phb.standalone.css) in your libris configuration file.
+* Make sure you use the setting 
+* Make sure you install the TTF fonts that can be found [here](https://github.com/lazy-scrivener-games/homebrewery-fork-for-libris/tree/convert-for-libris/themes/fonts/5e).
 
-## Standalone Usage
+## Usage with Libris
 
-* Run `homebrewery-to-enki < FILE_NAME.md`.
+* In your libris configuration JSON, add the following properties:
+```
+"markdownPipe": "homebrewery-to-libris",
+"documentWrapperClass": "page",
+```
 
-## Usage with Enki
+That's it!
 
-* Add a "markdownPipe" property to your enki config file that has the value "homebrewery-to-enki". Assuming homebrewery-to-enki is properly installed and on your system path, this will apply the effects to your files.
+## Independent usage
+
+* Run `homebrewery-to-libris < FILE_NAME.md`.
+
+## Homebrewery Note
+
+[Homebrewery](https://homebrewery.naturalcrit.com/) is [copyrighted by Scott Tolksdorf](https://github.com/naturalcrit/homebrewery/blob/master/license). If you like their tool, please consider [supporting its development](https://www.patreon.com/NaturalCrit)!

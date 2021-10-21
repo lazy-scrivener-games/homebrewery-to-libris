@@ -1,14 +1,14 @@
 """
-Converts a Homebrewery-formatted markdown input to an enki-compatible one
+Converts a Homebrewery-formatted markdown input to a libris-compatible one
 
-usage: homebrewery-to-enki <input string>
+usage: homebrewery-to-libris <input string>
 """
 import sys
 import markdown2
 
 def main():
     """
-    Converts a Homebrewery-formatted markdown input to an enki-compatible one.
+    Converts a Homebrewery-formatted markdown input to a libris-compatible one.
     """
     text = sys.stdin.read()
     lines = text.split('\n')
